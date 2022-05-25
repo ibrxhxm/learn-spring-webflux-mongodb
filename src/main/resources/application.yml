@@ -1,0 +1,34 @@
+server:
+  port: 8009
+
+spring:
+  application:
+    name: learn-spring-webflux
+  webflux:
+    base-path: /api
+
+  data:
+    mongodb:
+      authentication-database: admin
+      database: spring-mongo
+      username: rootuser
+      password: rootpass
+      port: 27017
+      host: localhost
+      auto-index-creation: true
+
+logging:
+  level:
+    com:
+      example: DEBUG
+    org:
+      springframework:
+        web: INFO
+        data:
+          mongodb:
+            core:
+              ReactiveMongoTemplate: DEBUG
+    reactor:
+      netty:
+        http:
+          client: DEBUG
